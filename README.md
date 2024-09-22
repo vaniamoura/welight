@@ -15,6 +15,7 @@
   - [Bug 1: O campo NOME aceita caracteres especiais](#bug-1-o-campo-nome-aceita-caracteres-especiais)
   - [Bug 2: O campo TELEFONE aceita caracteres especiais e letras](#bug-2-o-campo-telefone-aceita-caracteres-especiais-e-letras)
   - [Bug 3: O campo PAÍS não é carregado ao inserir o CEP](#bug-3-o-campo-país-não-é-carregado-ao-inserir-o-cep)
+  - [Bug 4: O campo DATA DE NASCIMENTO permite colocar a data atual](#bug-4-o-campo-data-de-nascimento-permite-colocar-a-data-atual)
 
 ---
 
@@ -149,7 +150,7 @@ Dentro de `\suite`, rode o comando `robot -d ./result CadLoginTests.Robot`
  
 - **Melhoria:** Ao inserir o CEP carregar o PAÍS.
 
-### **Bug 4: O campo DATA DE NASCIMENTO permitite colocar a data atual**
+### **Bug 4: O campo DATA DE NASCIMENTO permite colocar a data atual**
 - **Descrição:** O campo data de nascimento permite colocar a data atual.
 - **Passos para Reproduzir:**  
   - Acesse a [página de login](https://novo.welight.live/login).
