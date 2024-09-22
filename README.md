@@ -96,9 +96,9 @@ Dentro de `\suite`, rode o comando `robot -d ./result CadLoginTests.Robot`
 ### **Bug 1: O campo NOME aceita caracteres especiais**
 - **Descrição:** O campo nome aceita caracteres especiais e não tem limite de caracteres.
 - **Passos para Reproduzir:**  
-  1. Acesse a [página de login](https://novo.welight.live/login).
-  2. Clique em "CADASTRAR".
-  3. Preencha o campo nome com caracteres especiais e clique em "Cadastrar".
+  - Acesse a [página de login](https://novo.welight.live/login).
+  - Clique em "CADASTRAR".
+  - Preencha o campo nome com caracteres especiais e clique em "Cadastrar".
 - **Resultado esperado:** O sistema deve criticar e não permitir salvar.
 - **Ambiente:**  
   - Sistema operacional: Windows  
@@ -108,14 +108,16 @@ Dentro de `\suite`, rode o comando `robot -d ./result CadLoginTests.Robot`
 - **Severidade:** Média  
 - **Anexos:** 
   - ![image](https://github.com/user-attachments/assets/41e750a9-a2f9-4350-9f40-0bda70836c73) ![image](https://github.com/user-attachments/assets/a5311b60-3f56-4d1e-bb68-31b3d4c5cb5a)
+    
+- **Melhoria:** Não permitir caracteres especiais e limitar o tamanho do campo NOME.
 
 
 ### **Bug 2: O campo TELEFONE aceita caracteres especiais e letras**
 - **Descrição:** O campo telefone aceita caracteres especiais e letras.
 - **Passos para Reproduzir:**  
-  1. Acesse a [página de login](https://novo.welight.live/login).
-  2. Clique em "CADASTRAR".
-  3. Preencha o campo telefone com caracteres especiais e clique em "Cadastrar".
+  - Acesse a [página de login](https://novo.welight.live/login).
+  - Clique em "CADASTRAR".
+  - Preencha o campo telefone com caracteres especiais e clique em "Cadastrar".
 - **Resultado esperado:** O sistema deve criticar e não permitir salvar.
 - **Ambiente:**  
   - Sistema operacional: Windows  
@@ -125,14 +127,16 @@ Dentro de `\suite`, rode o comando `robot -d ./result CadLoginTests.Robot`
 - **Severidade:** Média  
 - **Anexos:**
   - ![image](https://github.com/user-attachments/assets/773ba9ca-c7ce-4570-9677-817da6afef67) ![image](https://github.com/user-attachments/assets/5f27c697-86df-4b5d-b4ee-f1b30a8663e0)
+    
+- **Melhoria:** Não permitir caracteres especiais, letras e limitar o tamanho do campo TELEFONE.
 
 ### **Bug 3: O campo PAÍS não é carregado ao inserir o CEP**
 - **Descrição:** O campo país não é carregado automaticamente ao inserir o CEP.
 - **Passos para Reproduzir:**  
-  1. Acesse a [página de login](https://novo.welight.live/login).
-  2. Digite login e senha.
-  3. Clique em "ENTRAR".
-  4. Preencha o campo CEP.
+  - Acesse a [página de login](https://novo.welight.live/login).
+  - Digite login e senha.
+  - Clique em "ENTRAR".
+  - Ao preencher o campo CEP o sistemas os demais capos relacionado ao endereço, o campo PAÍS não é carregado conforme os outros campos.
 - **Resultado esperado:** O campo país deve ser preenchido automaticamente.
 - **Ambiente:**  
   - Sistema operacional: Windows  
@@ -142,5 +146,27 @@ Dentro de `\suite`, rode o comando `robot -d ./result CadLoginTests.Robot`
 - **Severidade:** Média
 - **Anexos:**
   - ![image](https://github.com/user-attachments/assets/09e7b714-358b-48a9-9ac6-0045e06e5e3b) ![image](https://github.com/user-attachments/assets/563b408b-33c6-47e4-96d9-170fbf2d5578)
+ 
+- **Melhoria:** Ao inserir o CEP carregar o PAÍS.
+
+### **Bug 4: O campo DATA DE NASCIMENTO permitite colocar a data atual**
+- **Descrição:** O campo data de nascimento permite colocar a data atual.
+- **Passos para Reproduzir:**  
+  - Acesse a [página de login](https://novo.welight.live/login).
+  - Digite login e senha.
+  - Clique em "ENTRAR".
+  - Preencha o campo data de nascimento com a data atual.
+- **Resultado esperado:** Sistemas dar um alerta.
+- **Ambiente:**  
+  - Sistema operacional: Windows  
+  - Navegador: Chrome  
+  - Versão do aplicativo: 1.0
+- **Prioridade:** Média  
+- **Severidade:** Média
+- **Anexos:**
+   [Link do video - Melhoria.mp4](https://drive.google.com/file/d/1-CsNgAL6gc0yUUqPm8NkxhLhRhyqOHVD/view?usp=drive_link)
+ 
+- **Melhoria:** Sistema não permitir data de hoje e/ou data futura.
+  
 
 
