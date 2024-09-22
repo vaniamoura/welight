@@ -81,11 +81,11 @@ Dentro de `\suite`, rode o comando `robot -d ./result CadLoginTests.Robot`
 
 ### **CT01 - Cadastro login campos obrigatórios**
 - **Cenário:** Efetuar o cadastro com todos os campos preenchidos.
-- **Relatório de Log:** RELCT01.html.
+- **Relatório de Log:** `suite/result/RELCT01.html`
 
 ### **CT02 - Acessar o sistema com login criado e fazer alteração no cadastro**
 - **Cenário:** Acessar o sistema, entrar em "Minha Conta" e preencher o CEP.
-- **Relatório de Log:** RELCT02.html.
+- **Relatório de Log:** `suite/result/RELCT02.html`
 
 ---
 
