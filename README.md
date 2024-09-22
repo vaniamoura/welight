@@ -1,17 +1,137 @@
-# Teste de script automatizado WEB
+# Teste Prático - QA | Impact not a bank
 
-## Tecnologias
+## Sumário
+- [1. Casos de Teste Manuais](#1-casos-de-teste-manuais)
+  - [CT01 - Cadastro login campos obrigatórios](#ct01---cadastro-login-campos-obrigatórios)
+  - [CT02 - Cadastro com formato de telefone errado e nome com caracteres especiais](#ct02---cadastro-com-formato-de-telefone-errado-e-nome-com-caracteres-especiais)
+  - [CT03 - Tentativa de cadastro sem telefone](#ct03---tentativa-de-cadastro-sem-telefone)
+  - [CT04 - Teste login com e-mails incorretos](#ct04---teste-login-com-e-mails-incorretos)
+  - [CT05 - Teste login com senhas incorretas](#ct05---teste-login-com-senhas-incorretas)
+  - [CT06 - Verificar alterações realizadas em "Minha Conta"](#ct06---verificar-alterações-realizadas-em-minha-conta)
+- [2. Automação de Testes](#2-automação-de-testes)
+  - [CT01 - Cadastro login campos obrigatórios](#ct01---cadastro-login-campos-obrigatórios-1)
+  - [CT02 - Acessar o sistema](#ct02---acessar-o-sistema-com-login-criado-e-fazer-alteração-no-cadastro)
+- [3. Relatório de Bugs e Melhorias](#3-relatório-de-bugs-e-melhorias)
+  - [Bug 1: O campo NOME aceita caracteres especiais](#bug-1-o-campo-nome-aceita-caracteres-especiais)
+  - [Bug 2: O campo TELEFONE aceita caracteres especiais e letras](#bug-2-o-campo-telefone-aceita-caracteres-especiais-e-letras)
+  - [Bug 3: O campo PAÍS não é carregado ao inserir o CEP](#bug-3-o-campo-país-não-é-carregado-ao-inserir-o-cep)
 
+---
+
+## 1. Casos de Teste Manuais
+
+**Objetivo:** Criar ao menos 3 casos de teste manuais para cada cenário descrito.
+
+### Cenários:
+- Validar campos obrigatórios durante a criação do usuário, login e em "Minha Conta".
+- Verificar se não houve erros na criação de usuário.
+- Testar login com senhas e emails incorretos.
+- Verificar se as alterações realizadas em "Minha Conta" foram aplicadas.
+
+### **CT01 - Cadastro login campos obrigatórios**
+- **Objetivo:** Validar os campos obrigatórios na criação do usuário.
+- **Ação:** Acessar [Welight Login](https://novo.welight.live/login) > CADASTRAR, e validar os campos obrigatórios.
+- **Resultado esperado:** Exibir mensagem "Parabéns! Seu cadastro foi realizado com sucesso".
+- **Resultado apresentado:** Satisfatório.
+- **Evidência:** [Link do video - CT01.mp4](https://drive.google.com/file/d/17yp2QN5l0FICMl1SesQUcWWhND8Tl2w8/view?usp=sharing)
+
+### **CT02 - Cadastro com formato de telefone errado e nome com caracteres especiais**
+- **Ação:** Inserir caracteres especiais e mais de 100 caracteres no campo nome. No campo telefone, inserir mais números que o padrão nacional.
+- **Resultado esperado:** Não permitir telefone com quantidade de caracteres inválida.
+- **Resultado apresentado:** Exibiu a mensagem "Parabéns! Seu cadastro foi realizado com sucesso".
+- **Evidência:** [Link do video - CT02.mp4](https://drive.google.com/file/d/1eHYQ9VnSpX_BvrZ2WRP1apFCk56mAtz-/view?usp=drive_link)
+
+### **CT03 - Tentativa de cadastro sem telefone**
+- **Ação:** Preencher todos os campos, exceto o campo telefone.
+- **Resultado esperado:** O cadastro não deve ser possível.
+- **Resultado apresentado:** Satisfatório.
+- **Evidência:** [Link do video - CT03.mp4](https://drive.google.com/file/d/1STqifkeKYqPbaZHcFhVEbm074UZytxac/view?usp=drive_link)
+
+### **CT04 - Teste login com e-mails incorretos**
+- **Ação:** Inserir e-mail incorreto no login.
+- **Resultado esperado:** Exibir mensagem "Senha ou E-mail incorreto".
+- **Resultado apresentado:** Satisfatório.
+- **Evidência:** [Link do video - CT04.mp4](https://drive.google.com/file/d/1g0S0pwmmGeHZQqD5JcnNe-NnPlCX824a/view?usp=drive_link)
+
+### **CT05 - Teste login com senhas incorretas**
+- **Ação:** Inserir senha incorreta no login.
+- **Resultado esperado:** Exibir mensagem "Senha ou E-mail incorreto".
+- **Resultado apresentado:** Satisfatório.
+- **Evidência:** [Link do video - CT05.mp4](https://drive.google.com/file/d/1uEEXMm1JMXnPXjW7q5at5iZCqxMm-TDa/view?usp=drive_link)
+
+### **CT06 - Verificar alterações realizadas em "Minha Conta"**
+- **Ação:** Verificar se os dados modificados em "Minha Conta" foram salvos corretamente.
+- **Resultado esperado:** Os dados devem estar idênticos aos inseridos.
+- **Resultado apresentado:** Satisfatório.
+- **Evidência:** [Link do video - CT06.mp4](https://drive.google.com/file/d/1-CsNgAL6gc0yUUqPm8NkxhLhRhyqOHVD/view?usp=drive_link)
+
+## 2. Automação de Testes
+
+### Tecnologias
 * Robot Frameworks
 * Selenium
 * Python
+     
+**Ferramenta sugerida:** Selenium.  
+**Objetivo:** Automatizar o fluxo de criação de um usuário no sistema.
 
-## Execução 
+### Execução 
 
-1. Web
+Dentro de `\suite`, rode o comando `robot -d ./result CadLoginTests.Robot`
 
-Dentro de C:\projetos\aut_welight\web\suite, rode o comando `robot -d ./result CadLoginTests.Robot`
-     CT01 - Cadastro do Login
-     CT02 - Acessar o sistema com login criado e fazer alteração no cadastro
+### **CT01 - Cadastro login campos obrigatórios**
+- **Cenário:** Efetuar o cadastro com todos os campos preenchidos.
+- **Relatório de Log:** RELCT01.html.
 
+### **CT02 - Acessar o sistema com login criado e fazer alteração no cadastro**
+- **Cenário:** Acessar o sistema, entrar em "Minha Conta" e preencher o CEP.
+- **Relatório de Log:** RELCT02.html.
 
+---
+
+## 3. Relatório de Bugs e Melhorias
+
+**Objetivo:** Elaborar um relatório descrevendo bugs encontrados e sugerir melhorias para o sistema.
+
+### **Bug 1: O campo NOME aceita caracteres especiais**
+- **Descrição:** O campo nome aceita caracteres especiais e não tem limite de caracteres.
+- **Passos para Reproduzir:**  
+  1. Acesse a [página de login](https://novo.welight.live/login).
+  2. Clique em "CADASTRAR".
+  3. Preencha o campo nome com caracteres especiais e clique em "Cadastrar".
+- **Resultado esperado:** O sistema deve criticar e não permitir salvar.
+- **Ambiente:**  
+  - Sistema operacional: Windows  
+  - Navegador: Chrome  
+  - Versão do aplicativo: 1.0
+- **Prioridade:** Média  
+- **Severidade:** Média  
+
+### **Bug 2: O campo TELEFONE aceita caracteres especiais e letras**
+- **Descrição:** O campo telefone aceita caracteres especiais e letras.
+- **Passos para Reproduzir:**  
+  1. Acesse a [página de login](https://novo.welight.live/login).
+  2. Clique em "CADASTRAR".
+  3. Preencha o campo telefone com caracteres especiais e clique em "Cadastrar".
+- **Resultado esperado:** O sistema deve criticar e não permitir salvar.
+- **Ambiente:**  
+  - Sistema operacional: Windows  
+  - Navegador: Chrome  
+  - Versão do aplicativo: 1.0
+- **Prioridade:** Média  
+- **Severidade:** Média  
+
+### **Bug 3: O campo PAÍS não é carregado ao inserir o CEP**
+- **Descrição:** O campo país não é carregado automaticamente ao inserir o CEP.
+- **Passos para Reproduzir:**  
+  1. Acesse a [página de login](https://novo.welight.live/login).
+  2. Digite login e senha.
+  3. Clique em "ENTRAR".
+  4. Preencha o campo CEP.
+- **Resultado esperado:** O campo país deve ser preenchido automaticamente.
+- **Ambiente:**  
+  - Sistema operacional: Windows  
+  - Navegador: Chrome  
+  - Versão do aplicativo: 1.0
+- **Prioridade:** Média  
+- **Severidade:** Média
