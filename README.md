@@ -106,6 +106,9 @@ Dentro de `\suite`, rode o comando `robot -d ./result CadLoginTests.Robot`
   - Versão do aplicativo: 1.0
 - **Prioridade:** Média  
 - **Severidade:** Média  
+- **Anexos:** 
+  - ![image](https://github.com/user-attachments/assets/41e750a9-a2f9-4350-9f40-0bda70836c73) ![image](https://github.com/user-attachments/assets/a5311b60-3f56-4d1e-bb68-31b3d4c5cb5a)
+
 
 ### **Bug 2: O campo TELEFONE aceita caracteres especiais e letras**
 - **Descrição:** O campo telefone aceita caracteres especiais e letras.
@@ -120,6 +123,8 @@ Dentro de `\suite`, rode o comando `robot -d ./result CadLoginTests.Robot`
   - Versão do aplicativo: 1.0
 - **Prioridade:** Média  
 - **Severidade:** Média  
+- **Anexos:**
+  - ![image](https://github.com/user-attachments/assets/773ba9ca-c7ce-4570-9677-817da6afef67) ![image](https://github.com/user-attachments/assets/5f27c697-86df-4b5d-b4ee-f1b30a8663e0)
 
 ### **Bug 3: O campo PAÍS não é carregado ao inserir o CEP**
 - **Descrição:** O campo país não é carregado automaticamente ao inserir o CEP.
@@ -135,3 +140,7 @@ Dentro de `\suite`, rode o comando `robot -d ./result CadLoginTests.Robot`
   - Versão do aplicativo: 1.0
 - **Prioridade:** Média  
 - **Severidade:** Média
+- **Anexos:**
+  - ![image](https://github.com/user-attachments/assets/09e7b714-358b-48a9-9ac6-0045e06e5e3b) ![image](https://github.com/user-attachments/assets/563b408b-33c6-47e4-96d9-170fbf2d5578)
+
+
