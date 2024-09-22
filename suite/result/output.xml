@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.6 on win32)" generated="20240921 19:19:56.227" rpa="false" schemaversion="4">
+<suite id="s1" name="CadLoginTests" source="C:\projetos\aut_welight\web\suite\CadLoginTests.Robot">
+<test id="s1-t1" name="CT01 - Cadastro login campos obrigatórios" line="7">
+<kw name="Abrir a Página de Login" library="Cadlogin">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240921 19:19:56.708" level="INFO">Opening browser 'Chrome' to base url 'https://novo.welight.live/login'.</msg>
+<status status="PASS" starttime="20240921 19:19:56.708" endtime="20240921 19:20:09.295"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240921 19:20:09.296" endtime="20240921 19:20:09.569"/>
+</kw>
+<status status="PASS" starttime="20240921 19:19:56.707" endtime="20240921 19:20:09.570"/>
+</kw>
+<kw name="Clicar no botao cadastrar" library="Cadlogin">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BTN_CADASTRAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240921 19:20:09.573" endtime="20240921 19:20:09.763"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${BTN_CADASTRAR}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20240921 19:20:09.763" endtime="20240921 19:20:09.858"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BTN_CADASTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240921 19:20:09.861" level="INFO">Clicking element '//a[contains(.,'CADASTRAR')]'.</msg>
+<status status="PASS" starttime="20240921 19:20:09.859" endtime="20240921 19:20:11.959"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240921 19:20:13.959" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240921 19:20:11.959" endtime="20240921 19:20:13.959"/>
+</kw>
+<status status="PASS" starttime="20240921 19:20:09.572" endtime="20240921 19:20:13.959"/>
+</kw>
+<kw name="Digitar o nome" library="Cadlogin">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${INP_NOME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240921 19:20:14.488" endtime="20240921 19:20:15.380"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INP_NOME}</arg>
+<arg>Teste final Gravando</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240921 19:20:15.382" level="INFO">Typing text 'Teste final Gravando' into text field '//input[@placeholder='Nome']'.</msg>
+<status status="PASS" starttime="20240921 19:20:15.381" endtime="20240921 19:20:15.723"/>
+</kw>
+<status status="PASS" starttime="20240921 19:20:14.487" endtime="20240921 19:20:15.723"/>
+</kw>
+<kw name="Digitar o e-mail" library="Cadlogin">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${INP_EMAIL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240921 19:20:15.997" endtime="20240921 19:20:16.804"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INP_EMAIL}</arg>
+<arg>testefinal@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240921 19:20:16.805" level="INFO">Typing text 'testefinal@gmail.com' into text field '//input[@placeholder='Email']'.</msg>
+<status status="PASS" starttime="20240921 19:20:16.804" endtime="20240921 19:20:18.834"/>
+</kw>
+<status status="PASS" starttime="20240921 19:20:15.996" endtime="20240921 19:20:18.834"/>
+</kw>
+<kw name="Digitar o telefone" library="Cadlogin">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${INP_TELEFONE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240921 19:20:18.900" endtime="20240921 19:20:19.275"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INP_TELEFONE}</arg>
+<arg>21985856666</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240921 19:20:19.276" level="INFO">Typing text '21985856666' into text field '//input[@placeholder='Telefone']'.</msg>
+<status status="PASS" starttime="20240921 19:20:19.275" endtime="20240921 19:20:19.531"/>
+</kw>
+<status status="PASS" starttime="20240921 19:20:18.899" endtime="20240921 19:20:19.531"/>
+</kw>
+<kw name="Digitar o cpf" library="Cadlogin">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${INP_CPF}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240921 19:20:19.572" endtime="20240921 19:20:19.796"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INP_CPF}</arg>
+<arg>239.292.780-49</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240921 19:20:19.798" level="INFO">Typing text '239.292.780-49' into text field '//input[@placeholder='CPF']'.</msg>
+<status status="PASS" starttime="20240921 19:20:19.797" endtime="20240921 19:20:20.138"/>
+</kw>
+<status status="PASS" starttime="20240921 19:20:19.572" endtime="20240921 19:20:20.138"/>
+</kw>
+<kw name="Digite a Senha" library="Cadlogin">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${INP_SENHA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240921 19:20:20.146" endtime="20240921 19:20:20.201"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INP_SENHA}</arg>
+<arg>Abc123456</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240921 19:20:20.202" level="INFO">Typing text 'Abc123456' into text field '//input[@placeholder='Senha']'.</msg>
+<status status="PASS" starttime="20240921 19:20:20.201" endtime="20240921 19:20:20.448"/>
+</kw>
+<status status="PASS" starttime="20240921 19:20:20.145" endtime="20240921 19:20:20.449"/>
+</kw>
+<kw name="Confirme a Senha" library="Cadlogin">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${INP_CONFSENHA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240921 19:20:20.455" endtime="20240921 19:20:20.515"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INP_CONFSENHA}</arg>
+<arg>Abc123456</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240921 19:20:20.516" level="INFO">Typing text 'Abc123456' into text field 'id=user_password_confirmation'.</msg>
+<status status="PASS" starttime="20240921 19:20:20.515" endtime="20240921 19:20:20.735"/>
+</kw>
+<status status="PASS" starttime="20240921 19:20:20.455" endtime="20240921 19:20:20.736"/>
+</kw>
+<kw name="Click nos termos de aceite" library="Cadlogin">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CHK_TERMOSUSO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240921 19:20:20.743" endtime="20240921 19:20:20.798"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${CHK_TERMOSUSO}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240921 19:20:20.800" level="INFO">Clicking button 'id=termos-de-uso'.</msg>
+<status status="PASS" starttime="20240921 19:20:20.799" endtime="20240921 19:20:20.914"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240921 19:20:30.918" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240921 19:20:20.914" endtime="20240921 19:20:30.918"/>
+</kw>
+<status status="PASS" starttime="20240921 19:20:20.742" endtime="20240921 19:20:30.919"/>
+</kw>
+<kw name="Click em cadastrar login" library="Cadlogin">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BTN_REGISTRAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240921 19:20:30.931" endtime="20240921 19:20:31.213"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${BTN_REGISTRAR}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20240921 19:20:31.213" endtime="20240921 19:20:31.278"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BTN_REGISTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240921 19:20:31.282" level="INFO">Clicking element '//input[@id='btn_registrar']'.</msg>
+<status status="PASS" starttime="20240921 19:20:31.278" endtime="20240921 19:20:31.827"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240921 19:20:36.829" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240921 19:20:31.827" endtime="20240921 19:20:36.830"/>
+</kw>
+<status status="PASS" starttime="20240921 19:20:30.928" endtime="20240921 19:20:36.830"/>
+</kw>
+<kw name="Fechar Navegador" library="Cadlogin">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240921 19:20:36.840" endtime="20240921 19:20:39.460"/>
+</kw>
+<status status="PASS" starttime="20240921 19:20:36.838" endtime="20240921 19:20:39.460"/>
+</kw>
+<tag>001</tag>
+<status status="PASS" starttime="20240921 19:19:56.706" endtime="20240921 19:20:39.461"/>
+</test>
+<test id="s1-t2" name="CT02 - Acessar o sistema" line="21">
+<kw name="Abrir a Página de Login" library="Cadlogin">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240921 19:20:39.465" level="INFO">Opening browser 'Chrome' to base url 'https://novo.welight.live/login'.</msg>
+<status status="PASS" starttime="20240921 19:20:39.464" endtime="20240921 19:20:49.007"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240921 19:20:49.007" endtime="20240921 19:20:49.325"/>
+</kw>
+<status status="PASS" starttime="20240921 19:20:39.463" endtime="20240921 19:20:49.325"/>
+</kw>
+<kw name="Digitar o e-mail" library="Cadlogin">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${INP_EMAIL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240921 19:20:49.330" endtime="20240921 19:20:49.569"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INP_EMAIL}</arg>
+<arg>testefinal@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240921 19:20:49.570" level="INFO">Typing text 'testefinal@gmail.com' into text field '//input[@placeholder='Email']'.</msg>
+<status status="PASS" starttime="20240921 19:20:49.569" endtime="20240921 19:20:50.806"/>
+</kw>
+<status status="PASS" starttime="20240921 19:20:49.330" endtime="20240921 19:20:50.807"/>
+</kw>
+<kw name="Digite a Senha" library="Cadlogin">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${INP_SENHA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240921 19:20:50.814" endtime="20240921 19:20:50.886"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INP_SENHA}</arg>
+<arg>Abc123456</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240921 19:20:50.887" level="INFO">Typing text 'Abc123456' into text field '//input[@placeholder='Senha']'.</msg>
+<status status="PASS" starttime="20240921 19:20:50.886" endtime="20240921 19:20:51.249"/>
+</kw>
+<status status="PASS" starttime="20240921 19:20:50.814" endtime="20240921 19:20:51.249"/>
+</kw>
+<kw name="Click em entrar" library="Cadlogin">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BTN_ENTRAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240921 19:20:51.261" endtime="20240921 19:20:51.333"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${BTN_ENTRAR}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20240921 19:20:51.333" endtime="20240921 19:20:51.369"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BTN_ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240921 19:20:51.371" level="INFO">Clicking element '//input[contains(@value,'Entrar')]'.</msg>
+<status status="PASS" starttime="20240921 19:20:51.370" endtime="20240921 19:20:51.641"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240921 19:20:56.643" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240921 19:20:51.642" endtime="20240921 19:20:56.643"/>
+</kw>
+<status status="PASS" starttime="20240921 19:20:51.261" endtime="20240921 19:20:56.643"/>
+</kw>
+<kw name="Click em conta" library="Cadlogin">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BTN_CONTA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240921 19:20:57.011" endtime="20240921 19:20:58.025"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BTN_CONTA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240921 19:20:58.026" level="INFO">Clicking element '//div[@placement='bottom']'.</msg>
+<status status="PASS" starttime="20240921 19:20:58.025" endtime="20240921 19:20:58.544"/>
+</kw>
+<status status="PASS" starttime="20240921 19:20:57.010" endtime="20240921 19:20:58.544"/>
+</kw>
+<kw name="Click em minha conta" library="Cadlogin">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BTN_MINHACONTA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240921 19:20:58.868" endtime="20240921 19:20:59.445"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BTN_MINHACONTA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240921 19:20:59.446" level="INFO">Clicking element '//a[@href='/myaccount']'.</msg>
+<status status="PASS" starttime="20240921 19:20:59.445" endtime="20240921 19:20:59.960"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240921 19:21:01.961" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240921 19:20:59.960" endtime="20240921 19:21:01.961"/>
+</kw>
+<status status="PASS" starttime="20240921 19:20:58.868" endtime="20240921 19:21:01.961"/>
+</kw>
+<kw name="Digite o CEP" library="Cadlogin">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${INP_CEP}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240921 19:21:01.979" endtime="20240921 19:21:02.384"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INP_CEP}</arg>
+<arg>24240-660</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240921 19:21:02.386" level="INFO">Typing text '24240-660' into text field '//input[@name='userCep']'.</msg>
+<status status="PASS" starttime="20240921 19:21:02.385" endtime="20240921 19:21:03.030"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${INP_CEP}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240921 19:21:03.032" level="INFO">Sending key(s) ('ENTER',) to //input[@name='userCep'] element.</msg>
+<msg timestamp="20240921 19:21:03.812" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20240921 19:21:03.812" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20240921 19:21:03.031" endtime="20240921 19:21:04.063"/>
+</kw>
+<status status="PASS" starttime="20240921 19:21:01.978" endtime="20240921 19:21:04.063"/>
+</kw>
+<kw name="Click em salvar" library="Cadlogin">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BTN_SALVAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240921 19:21:04.071" endtime="20240921 19:21:04.623"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${BTN_SALVAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240921 19:21:04.624" level="INFO">Clicking button '//button[contains(.,'Salvar')]'.</msg>
+<status status="PASS" starttime="20240921 19:21:04.623" endtime="20240921 19:21:05.415"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240921 19:21:10.420" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240921 19:21:05.416" endtime="20240921 19:21:10.421"/>
+</kw>
+<status status="PASS" starttime="20240921 19:21:04.071" endtime="20240921 19:21:10.421"/>
+</kw>
+<kw name="Fechar Navegador" library="Cadlogin">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240921 19:21:10.430" endtime="20240921 19:21:14.882"/>
+</kw>
+<status status="PASS" starttime="20240921 19:21:10.429" endtime="20240921 19:21:14.882"/>
+</kw>
+<tag>002</tag>
+<status status="PASS" starttime="20240921 19:20:39.462" endtime="20240921 19:21:14.884"/>
+</test>
+<doc>Testes Cadastro de Login</doc>
+<status status="PASS" starttime="20240921 19:19:56.231" endtime="20240921 19:21:14.886"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">001</stat>
+<stat pass="1" fail="0" skip="0">002</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="CadLoginTests">CadLoginTests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
